@@ -17,14 +17,26 @@ namespace ContactsManager.Models
         {
             
         }
-        public Contacto(int id, string nome, string telefone, string email)
+        public Contacto(int id, string nome, string telefone, string email,bool verifica)
         {
-            this.ID = ID_creator;
-            ID_creator++;
-            this.Nome = nome;
-            this.Telefone = telefone;
-            this.Email = email;
+            if (!verifica == false)
+            {
+                this.ID = ID_creator;
+                ID_creator++;
+                this.Nome = nome;
+                this.Telefone = telefone;
+                this.Email = email;
+            }
+            else
+            {
+                this.ID = id;
+                
+                this.Nome = nome;
+                this.Telefone = telefone;
+                this.Email = email;
+            }
         }
+        
 
     }
     

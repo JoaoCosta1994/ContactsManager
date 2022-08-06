@@ -7,15 +7,14 @@
 <h2>Lista de contactos : </h2>
 
 
-Pressione @Html.ActionLink("aqui", "AdicionarContacto", "Home") para adicionar contactos.
 
-<table>
+
+<table width="467" border="1px">
     <thead>
         <tr>
-            <th>ID CONTACTO</th>
+           
             <th>NOME </th>
-            <th>Telemóvel/Telefone</th>
-            <th>EMAIL</th>
+           
         </tr>
     </thead>
     <tbody>
@@ -24,10 +23,15 @@ Pressione @Html.ActionLink("aqui", "AdicionarContacto", "Home") para adicionar c
             
       
         <tr>
-            <td>@item.ID</td>
-            <td>@item.Nome</td>
-            <td>@item.Telefone</td>
-            <td>@item.Email</td>
+            
+            <td>@item.Nome 
+                            <form action="~/Home/Index" method="post"> 
+                                <button type="submit"  value="@item.ID">Eliminar</button>
+                                
+                            </form>
+            </td>
+            
+            
         </tr>
         }
     </tbody>

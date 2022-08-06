@@ -10,7 +10,7 @@
             <form action="~/Home/AdicionarContacto" method="post">
                 <!--    ID CONTACTO -->
                 <label for="ID">ID do contacto :</label>
-                <input type="text" id="ID" name="ID"><br><br>
+                <input type="text" id="ID" name="ID" readonly value="@ContactsManager.Models.listatelefonica.ListaTelefonica.Count().ToString()"><br><br>
                 <!--    NOME CONTACTO -->
                 <label for="Nome">O seu nome :</label>
                 <input type="text" id="Nome" name="Nome"><br><br>

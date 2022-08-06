@@ -164,6 +164,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\AdicionarContacto.cshtml" />
     <Content Include="Views\Home\adicionado.cshtml" />
+    <Content Include="Views\Home\eliminado.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
