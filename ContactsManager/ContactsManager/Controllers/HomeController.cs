@@ -11,7 +11,8 @@ namespace ContactsManager.Controllers
     {
         public ViewResult Index()
         {
-            return View("Index");
+           
+            return View("Index",listatelefonica.ListaTelefonica);
         }
         [HttpGet]
         public ViewResult AdicionarContacto()
@@ -21,8 +22,9 @@ namespace ContactsManager.Controllers
         [HttpPost]
         public ViewResult AdicionarContacto(Contacto resposta )
         {
-            listatelefonica.AdicionarContacto(resposta);
-            return View("adicionado",resposta);
+            Contacto conc = new Contacto(resposta.ID, resposta.Nome, resposta.Telefone, resposta.Email);
+            listatelefonica.AdicionarContacto(conc);
+            return View("adicionado",conc);
         }
 
     }  

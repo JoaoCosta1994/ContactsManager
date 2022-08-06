@@ -10,6 +10,7 @@ namespace ContactsManager.Models
         private static List<Contacto> LISTA = new List<Contacto>();
         public static void AdicionarContacto (Contacto resposta)
         {
+            
             LISTA.Add(resposta);
         }
 

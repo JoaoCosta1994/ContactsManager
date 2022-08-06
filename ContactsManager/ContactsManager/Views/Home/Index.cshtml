@@ -1,4 +1,5 @@
-﻿@model ContactsManager.Models.listatelefonica
+﻿@model IEnumerable<ContactsManager.Models.Contacto>
+
 @{
     ViewBag.Title = "Index";
 }
@@ -7,5 +8,29 @@
 
 
 Pressione @Html.ActionLink("aqui", "AdicionarContacto", "Home") para adicionar contactos.
+
+<table>
+    <thead>
+        <tr>
+            <th>ID CONTACTO</th>
+            <th>NOME </th>
+            <th>Telemóvel/Telefone</th>
+            <th>EMAIL</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (ContactsManager.Models.Contacto item in Model)
+        {
+            
+      
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Nome</td>
+            <td>@item.Telefone</td>
+            <td>@item.Email</td>
+        </tr>
+        }
+    </tbody>
+</table>
 
 
