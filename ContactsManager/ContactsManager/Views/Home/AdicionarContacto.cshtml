@@ -1,0 +1,28 @@
+﻿@model ContactsManager.Models.Contacto
+@{
+    ViewBag.Title = "AdicionarContacto";
+}
+
+<h2>PAGINA PARA ADICIONAR CONTACTOS </h2>
+<div>
+    <h3>Formulário</h3>
+        <div>
+            <form action="~/Home/AdicionarContacto" method="post">
+                <!--    ID CONTACTO -->
+                <label for="ID">ID do contacto :</label>
+                <input type="text" id="ID" name="ID"><br><br>
+                <!--    NOME CONTACTO -->
+                <label for="Nome">O seu nome :</label>
+                <input type="text" id="Nome" name="Nome"><br><br>
+                <!--    CONTACTO -->
+                <label for="Telefone">o seu contacto telefonico :</label>
+                <input type="text" id="Telefone" name="Telefone"><br><br>
+                <!--    EMAIL CONTACTO -->
+                <label for="Email">Email do contacto :</label>
+                <input type="text" id="Email" name="Email"><br><br>
+                <button tyoe="submit">Enviar</button>
+
+
+            </form>
+        </div>
+</div>
