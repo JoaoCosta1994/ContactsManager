@@ -23,7 +23,7 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                     <li>@Html.ActionLink("Adicionar Contacto", "AdicionarContacto", "Home")</li>
-                    <li>@Html.ActionLink("Detalhes de Contacto", "Detalhe", "Home")</li>
+                    <li>@Html.ActionLink("Detalhes de Contacto", "detalhes", "Home")</li>
                 </ul>
             </div>
         </div>
@@ -32,7 +32,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Meu Aplicativo ASP.NET</p>
+            <p>&copy; @DateTime.Now.Year - ContactManager ASP.NET</p>
         </footer>
     </div>
 

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ContactsManager.Models.Contacto>
+@{
+    ViewBag.Title = "detalhes";
+}
+
+<h2>Detalhes dos Contactos</h2>
+
+<table width="467" border="1px">
+    <thead>
+        <tr>
+            <th>ID </th>
+            <th>NOME </th>
+            <th>TELEMÓVEL/TELEFONE </th>
+            <th>E-MAIL ASSOCIADO </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @{int i = 0;
+            foreach (ContactsManager.Models.Contacto item in Model)
+            {
+
+
+                <tr>
+
+                    <td>
+                        @item.ID
+                    </td>
+                    <td>
+                        @item.Nome
+                    </td>
+                    <td>
+                        @item.Telefone
+                    </td>
+                    <td>
+                        @item.Email
+                    </td>
+
+
+                </tr>
+            i++;
+        }
+        }
+    </tbody>
+</table>
+

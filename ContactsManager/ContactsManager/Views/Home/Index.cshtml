@@ -18,22 +18,25 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (ContactsManager.Models.Contacto item in Model)
+        @{int i = 0;
+        foreach (ContactsManager.Models.Contacto item in Model)
         {
-            
-      
+           
+
         <tr>
             
             <td>@item.Nome 
                             <form action="~/Home/Index" method="post"> 
-                                <button type="submit"  value="@item.ID">Eliminar</button>
+                                <button type="submit"  value="@item.ID=i">Eliminar</button>
                                 
                             </form>
             </td>
             
             
         </tr>
+        i++;
         }
+            }
     </tbody>
 </table>
 
